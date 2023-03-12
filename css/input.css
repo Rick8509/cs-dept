@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .navbar {
+        @apply absolute bg-secondary;
+    }
+
+    .headbar {
+        @apply absolute bg-primary top-0 w-full h-[4.09vw] rounded-br-[42px] rounded-bl-[42px] text-white;
+    }
+    .cropImage {
+        clip-path: polygon(100% 0%, 100% 58%, 0% 76%, 0% 0%);
+    }
+    .cropFooter {
+        clip-path: polygon(100% 100%, 100% 0, 0 15%, 0 100%);
+    }
+
+    .rotateEffect{
+        clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);
+    }
+
+
+}
