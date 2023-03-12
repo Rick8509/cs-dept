@@ -731,6 +731,26 @@ video {
   top: 14vw;
 }
 
+.top-\[4\.5vw\]{
+  top: 4.5vw;
+}
+
+.top-\[6\.5vw\]{
+  top: 6.5vw;
+}
+
+.top-\[9vw\]{
+  top: 9vw;
+}
+
+.top-\[15vw\]{
+  top: 15vw;
+}
+
+.top-\[18vw\]{
+  top: 18vw;
+}
+
 .z-\[1\]{
   z-index: 1;
 }
@@ -1607,6 +1627,11 @@ video {
 .text-red-600{
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-\[blue\]{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 255 / var(--tw-text-opacity));
 }
 
 .underline{
