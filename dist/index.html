@@ -243,14 +243,14 @@
       <div class="flex">
         <div>
           <div class="flex children:w-[17.2vw] children:h-[23vw]">
-            <div style="margin: 1vw 1vw;"><img src="/images/ss.jpg" alt="" /></div>
-            <div style="margin: 1vw 1vw;"><img src="/images/mm.jpg" alt="" /></div>
-            <div style="margin: 1vw 1vw;"><img src="/images/dd.jpg" alt="" /></div>
+            <div style="margin: 1vw 1vw"><img src="/images/ss.jpg" alt="" /></div>
+            <div style="margin: 1vw 1vw"><img src="/images/mm.jpg" alt="" /></div>
+            <div style="margin: 1vw 1vw"><img src="/images/dd.jpg" alt="" /></div>
           </div>
           <div class="flex children:w-[17.2vw] children:h-[23vw]">
-            <div style="margin: 1vw 1vw;"><img src="/images/ps.jpg" alt="" /></div>
-            <div style="margin: 1vw 1vw;"><img src="/images/sa.jpg" alt="" /></div>
-            <div style="margin: 1vw 1vw;"><img src="/images/sm.jpg" alt="" /></div>
+            <div style="margin: 1vw 1vw"><img src="/images/ps.jpg" alt="" /></div>
+            <div style="margin: 1vw 1vw"><img src="/images/sa.jpg" alt="" /></div>
+            <div style="margin: 1vw 1vw"><img src="/images/sm.jpg" alt="" /></div>
           </div>
         </div>
 
@@ -285,8 +285,8 @@
         technical society. We educate the students to be fruitful, moral, capable issue
         solvers and deep rooted for contributing emphatically to the nation through
         Computer education.
-        <p>--Prof. Somnath Saha</p>
-        <p>HOD, Dept of CS</p>
+        <p class="flex mr-[8vw] justify-end">--Prof. Somnath Saha</p>
+        <p class="flex mr-[8vw] justify-end">HOD, Dept of CS</p>
       </span>
     </div>
 
@@ -405,80 +405,80 @@
         </div>
       </div>
     </div>
-  <script>
-    var count = 0;
+    <script>
+      var count = 0;
 
-    window.addEventListener("scroll", function () {
-      var element = document.querySelector("#faculties");
-      var position = element.getBoundingClientRect();
+      window.addEventListener("scroll", function () {
+        var element = document.querySelector("#faculties");
+        var position = element.getBoundingClientRect();
 
-      // // checking whether fully visible
-      // if(position.top >= 0 && position.bottom <= window.innerHeight) {
-      // 	console.log('Element is fully visible in screen');
-      // }
+        // // checking whether fully visible
+        // if(position.top >= 0 && position.bottom <= window.innerHeight) {
+        // 	console.log('Element is fully visible in screen');
+        // }
 
-      // checking for partial visibility
-      if (position.top < window.innerHeight && position.bottom >= 0) {
-        count++;
-        if (count == 1) {
-          console.log("working");
-          $("#count").each(function () {
-            $(this)
-              .prop("Counter", 0)
-              .animate(
-                {
-                  Counter: $(this).text(),
-                },
-                {
-                  duration: 8000,
-                  easing: "swing",
-                  step: function (now) {
-                    $(this).text(Math.ceil(now));
+        // checking for partial visibility
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+          count++;
+          if (count == 1) {
+            console.log("working");
+            $("#count").each(function () {
+              $(this)
+                .prop("Counter", 0)
+                .animate(
+                  {
+                    Counter: $(this).text(),
                   },
-                }
-              );
-          });
+                  {
+                    duration: 8000,
+                    easing: "swing",
+                    step: function (now) {
+                      $(this).text(Math.ceil(now));
+                    },
+                  }
+                );
+            });
 
-          $("#count2").each(function () {
-            $(this)
-              .prop("Counter", 0)
-              .animate(
-                {
-                  Counter: $(this).text(),
-                },
-                {
-                  duration: 8000,
-                  easing: "swing",
-                  step: function (now) {
-                    $(this).text(Math.ceil(now));
+            $("#count2").each(function () {
+              $(this)
+                .prop("Counter", 0)
+                .animate(
+                  {
+                    Counter: $(this).text(),
                   },
-                }
-              );
-          });
+                  {
+                    duration: 8000,
+                    easing: "swing",
+                    step: function (now) {
+                      $(this).text(Math.ceil(now));
+                    },
+                  }
+                );
+            });
+          }
+        }
+      });
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides")[0].children;
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.transform = "translateX(" + (i - (slideIndex - 1)) * 100 + "%)";
         }
       }
-    });
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides((slideIndex += n));
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("slides")[0].children;
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.transform = "translateX(" + (i - (slideIndex - 1)) * 100 + "%)";
-      }
-    }
-  </script>
+    </script>
   </body>
 </html>
